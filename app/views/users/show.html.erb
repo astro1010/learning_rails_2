@@ -12,7 +12,9 @@
 
 <p>
   <strong>MicroPost</strong>
-  <%= @user.microposts.first.content %>
+  <% if @user.microposts.first != nil %>
+    <%= @user.microposts.first.content %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
